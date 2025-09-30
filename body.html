@@ -396,6 +396,106 @@
         font-size: 28px;
       }
     }
+    /* ======================================= */
+/* Estilos Globales para el Look Neón */
+/* ======================================= */
+:root {
+  --color-neón-principal: #9f91ff; /* Morado claro/lila brillante */
+  --color-fondo-oscuro: #0E0E11;
+  --color-acento-titulo: #6658B7;
+}
+
+/* Base de Enlaces con efecto Neón */
+.footer-nuevo .list-unstyled a {
+  /* Estilo general para todos los enlaces del footer */
+  color: rgba(255, 255, 255, 0.7) !important;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-size: 0.95rem;
+  /* Eliminamos el subrayado por defecto para que el neón se vea mejor */
+  text-decoration: none !important; 
+}
+.footer-nuevo .list-unstyled a:hover {
+  color: var(--color-neón-principal) !important;
+  /* Sombra de texto brillante para el efecto neón */
+  text-shadow: 0 0 5px var(--color-neón-principal), 0 0 10px var(--color-neón-principal);
+}
+
+/* Línea Divisoria con brillo Neón */
+.footer-nuevo hr {
+  opacity: 1;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-color: #6658B7;
+  /* Sombra de caja para el efecto neón en la línea divisoria */
+  box-shadow: 0 0 10px #6658B7, 0 0 20px #6658B7; 
+  height: 2px; /* Hacemos la línea un poco más gruesa */
+}
+
+/* ======================================= */
+/* Estilos para la sección de Logos (3 Empresas) */
+/* ======================================= */
+.logos-grilla-contenedor {
+  background: linear-gradient(to bottom, #1A1A27 0%, var(--color-fondo-oscuro) 100%);
+  padding: 80px 20px 40px; 
+}
+.logos-grilla {
+  display: flex; justify-content: space-around; align-items: center; max-width: 900px; margin: 0 auto;
+}
+.logo-item-static {
+  flex: 1; text-align: center; padding: 0 15px;
+}
+.logo-item-static img {
+  height: auto; max-width: 100%; max-height: 70px;
+  filter: grayscale(100%) brightness(180%);
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+.logo-item-static img:hover {
+  filter: grayscale(0%) brightness(100%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+  .logos-grilla { flex-direction: column; gap: 40px; }
+}
+
+/* ======================================= */
+/* Estilos del Footer (Tu estructura) */
+/* ======================================= */
+.footer-nuevo {
+  padding-top: 5rem; 
+  padding-bottom: 3rem; 
+}
+.footer-nuevo h6 {
+  font-weight: bold;
+  font-size: 1rem;
+  /* Aplicamos el neón a los títulos */
+  color: var(--color-neón-principal) !important; 
+  text-shadow: 0 0 5px rgba(159, 145, 255, 0.8);
+}
+.footer-nuevo .form-control {
+  background-color: #1a1a27 !important;
+  border: 1px solid var(--color-acento-titulo) !important;
+  color: #ffffff !important;
+}
+
+/* --- ESTILOS DE REDES SOCIALES CON COLORES DE MARCA --- */
+.social-icon-facebook { color: #1877F2 !important; }
+.social-icon-twitter { color: #1DA1F2 !important; } /* Usamos el azul de Twitter */
+.social-icon-youtube { color: #FF0000 !important; }
+.social-icon-instagram { color: #E4405F !important; }
+
+/* Aplicamos sombra neón a los iconos de redes sociales al pasar el ratón */
+.footer-nuevo .social-icon-link-item:hover .fab {
+  text-shadow: 0 0 8px currentColor, 0 0 12px currentColor; 
+  transform: scale(1.1);
+}
+
+/* Estilos de maquetación */
+.footer-nuevo .col-md-3 {text-align: center;}
+@media (min-width: 768px) {
+  .footer-nuevo .col-md-3 {text-align: left;}
+}
   </style>
 </head>
 <!--  botón flotante de WhatsApp -->
@@ -1003,10 +1103,21 @@
 </section>
 <!--Fin de Panes y Precios -->
 <!-- Footer -->
-<footer style="background-color: #0E0E11; color: #ffffff;">
+<section class="logos-grilla-contenedor">
+  <div class="container text-center mb-5">
+    <h2 class="text-white fw-bold mb-3">Confían en Nosotros</h2>
+    <p class="text-muted">Nuestra tecnología es utilizada y respaldada por:</p>
+  </div>
+
+  <div class="logos-grilla">
+    <div class="logo-item-static"><img src="URL_IMAGEN_EMPRESA_1" alt="Logo de la Empresa 1"></div>
+    <div class="logo-item-static"><img src="URL_IMAGEN_EMPRESA_2" alt="Logo de la Empresa 2"></div>
+    <div class="logo-item-static"><img src="URL_IMAGEN_EMPRESA_3" alt="Logo de la Empresa 3"></div>
+  </div>
+</section>
+<footer class="footer-nuevo" style="background-color: #0E0E11; color: #ffffff;">
   <div class="container py-5">
     <div class="row text-center text-md-left">
-      <!-- Idioma -->
       <div class="col-md-3 mb-4">
         <h6 style="color: #6658B7;">Idioma</h6>
         <select class="form-control rounded-pill bg-dark text-light border-0" aria-label="Seleccionar idioma">
@@ -1014,7 +1125,6 @@
           <option>Inglés</option>
         </select>
       </div>
-      <!-- Plataforma -->
       <div class="col-md-3 mb-4">
         <h6 style="color: #6658B7;">Plataforma</h6>
         <ul class="list-unstyled">
@@ -1023,7 +1133,6 @@
           <li><a href="#" class="text-white-50 d-block">Noticias</a></li>
         </ul>
       </div>
-      <!-- Legal -->
       <div class="col-md-3 mb-4">
         <h6 style="color: #6658B7;">Legal</h6>
         <ul class="list-unstyled">
@@ -1032,28 +1141,27 @@
           <li><a href="#" class="text-white-50 d-block">Política de cookies</a></li>
         </ul>
       </div>
-      <!-- Redes Sociales -->
       <div class="col-md-3 mb-4">
         <h6 style="color: #6658B7;">Redes sociales</h6>
         <ul class="list-unstyled">
-          <li class="mb-2">
+          <li class="mb-2 social-icon-link-item">
             <a href="#" class="text-white-50 align-items-center" aria-label="Facebook">
-              <i class="fab fa-facebook-f mr-2" style="color: #6658B7;"></i>Facebook
+              <i class="fab fa-facebook-f mr-2 social-icon-facebook"></i>Facebook
             </a>
           </li>
-          <li class="mb-2">
+          <li class="mb-2 social-icon-link-item">
             <a href="#" class="text-white-50 align-items-center" aria-label="Twitter / X">
-              <i class="fab fa-twitter mr-2" style="color: #6658B7;"></i>X
+              <i class="fab fa-twitter mr-2 social-icon-twitter"></i>X
             </a>
           </li>
-          <li class="mb-2">
+          <li class="mb-2 social-icon-link-item">
             <a href="#" class="text-white-50 align-items-center" aria-label="YouTube">
-              <i class="fab fa-youtube mr-2" style="color: #6658B7;"></i>YouTube
+              <i class="fab fa-youtube mr-2 social-icon-youtube"></i>YouTube
             </a>
           </li>
-          <li>
+          <li class="social-icon-link-item">
             <a href="#" class="text-white-50 align-items-center" aria-label="Instagram">
-              <i class="fab fa-instagram mr-2" style="color: #6658B7;"></i>Instagram
+              <i class="fab fa-instagram mr-2 social-icon-instagram"></i>Instagram
             </a>
           </li>
         </ul>
