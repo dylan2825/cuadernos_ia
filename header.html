@@ -266,70 +266,252 @@
         --gap: 10px;
       }
     }
+   
+ /* Animación de desplazamiento */
+  @keyframes scroll-infinito {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Mueve todas las imágenes de derecha a izquierda */
+    }
+  }
+
+  .carrusel-logos-lista img {
+    height: var(--logo-h);
+    width: auto;
+    flex: 0 0 auto;
+    background: var(--card-bg);
+    border-radius: var(--card-br);
+    padding: 10px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px rgba(255, 213, 0, 0.977);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, background 0.3s ease;
+    filter: grayscale(100%) saturate(70%) contrast(90%);
+  }
+
+  .carrusel-logos-lista img:hover {
+    transform: translateY(-4px) scale(1.1);
+    filter: none;
+    box-shadow: 0 0 20px rgb(255, 213, 0);
+    background: color-mix(in srgb, #ffd900 30%, transparent);
+  }
+
+  /* Para pantallas pequeñas */
+  @media (max-width: 768px) {
+    :root {
+      --logo-h: 50px;
+      --gap: 10px;
+    }
+  }
+
     /* Estilos de planes de suscripción */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .toggle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .toggle-container .toggle {
+      background-color: #2c2c2c;
+      border-radius: 50px;
+      padding: 5px;
+      width: 200px;
+      height: 40px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toggle-container .toggle #toggle-indicator {
+      background-color: #ffffff;
+      border-radius: 50px;
+      width: 90px;
+      height: 30px;
+      position: absolute;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-container .toggle span {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .toggle-container .toggle #instituciones {
+      color: #b5b5b5;
+      opacity: 0.6;
+    }
+
+    .toggle-container .toggle #docentes {
+      opacity: 1;
+    }
+
+    .plans-section {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .plan-card {
+      background-color: #212121;
+      border-radius: 10px;
+      padding: 30px 20px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      color: #d5c9ff;
+    }
+
+    .plan-card h2 {
+      font-size: 1.5rem;
+    }
+
+    .plan-card p {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .plan-card button {
+      background-color: #6c5dd3;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .plan-card button:hover {
+      background-color: #5a4bb5;
+    }
     .author-img-circle {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
+
     .author-img-circle:hover {
       transform: scale(1.08);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
     }
+
     .badge {
       border: none !important;
       text-decoration: none !important;
       box-shadow: none !important;
     }
+
     .carousel-indicators {
       display: none !important;
     }
+
     #descuento {
       animation: rebote 2.5s ease-in-out infinite;
     }
+
     @keyframes rebote {
       0% {
         transform: translateY(0);
       }
+
       25% {
         transform: translateY(-10px);
       }
+
       50% {
         transform: translateY(0);
       }
-     75% {
+
+      75% {
         transform: translateY(-5px);
       }
-     100% {
+
+      100% {
         transform: translateY(0);
       }
     }
+
     .carousel-item .col-md-3 .d-flex .justify-content-between {
       gap: 50px;
     }
+
     ul {
       padding: 0;
       font-size: 0.95rem;
     }
+
     li {
       font-weight: bold;
       margin: 10px 0;
       display: flex;
       align-items: center;
     }
+
     .activo {
       color: #28a745;
     }
+
     .inactivo {
       color: #e63946;
       text-decoration: line-through;
       opacity: 0.7;
     }
+
     li:hover {
       transform: scale(1.05);
     }
-   li i {
+
+    li i {
       margin-right: 10px;
     }
+
+    .active-toggle {
+  color: black !important;
+  z-index: 2;
+}
+
+.inactive-toggle {
+  color: white !important;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.plans-section button {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.plans-section button:hover {
+  transform: scale(1.05);
+}
+
+.plans-section button {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative; /* para que el z-index funcione */
+  z-index: 1;
+}
+
+.plans-section img {
+  position: absolute !important; /* ya está, solo aseguramos */
+  z-index: 10; /* más alto que el botón */
+}
+
+
+
+
     /* Estilos para el botón flotante de WhatsApp */
     .whatsapp-float {
       /* Posicionamiento y dimensiones */
@@ -396,6 +578,9 @@
         font-size: 28px;
       }
     }
+
+
+    
   </style>
 </head>
 <!--  botón flotante de WhatsApp -->
@@ -919,15 +1104,67 @@
 <!--Fin Libros destacados-->
 <!-- Sección de Planes y Precios -->
 <section>
-  <div style="background-color: #7176ad; padding: 40px; box-shadow: 0 0 30px rgba(0,0,0,0.3);">
+ <!-- Sección de Planes y Precios -->
+<div style="background-color: #0E0E11 0%, #1A1A27 100%; padding: 40px; box-shadow: 0 0 30px rgba(0,0,0,0.3);">
+  <h2 style="text-align:center; color:#ffffff; margin-bottom:30px; word-wrap: break-word; font-size: 30px; font-weight: bold;">Elige tu plan de preferencia</h2>
+  
+ 
+  <!-- Selector tipo toggle -->
+<div class="toggle-container" 
+     style="display: flex; justify-content: center; align-items: center; margin: 40px 0; cursor: pointer;">
+
+  <div style="background-color: #1a1a1a; 
+              border: 1px solid #444; 
+              border-radius: 50px; 
+              width: 240px; 
+              height: 50px; 
+              position: relative; 
+              display: flex; 
+              align-items: center; 
+              overflow: hidden;">
+
+    <!-- Indicador de selección (pulgar) -->
+    <div id="toggle-indicator" 
+         style="background-color: #ffffff; 
+                border-radius: 50px; 
+                width: 50%; 
+                height: 100%; 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                transition: all 0.3s ease; 
+                z-index: 1;">
+    </div>
+
+ 
+
+    <!-- Opción Docentes -->
+<span id="docentes-toggle" class="active-toggle"
+      style="flex: 1; text-align: center; font-weight: bold; font-size: 1rem; position: relative;">
+  Docentes
+</span>
+
+<!-- Opción Instituciones -->
+<span id="instituciones-toggle" class="inactive-toggle"
+      style="flex: 1; text-align: center; font-weight: bold; font-size: 1rem; position: relative;">
+  Instituciones
+</span>
+
+
+  </div>
+</div>
+
+  
+  <!-- Planes de Docentes -->
+  <div id="docentes-content" class="plans-section" style="display: block; margin-top: 40px;">
     <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-      <div
-        style="background-color: #212121; border-radius: 10px; padding: 30px 20px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.4); color: #d5c9ff;">
+      <!-- Plan Free -->
+      <div style="background-color: #212121; border-radius: 10px; padding: 30px 20px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.4); color: #d5c9ff;">
         <h2 style="margin-top: 21px; font-size: 1.5rem;">Plan Free</h2>
-        <p style="font-size: 1.3rem; font-weight: bold; margin: 0;">🇵🇪 S/0</p>
         <br>
-        <p style="font-size: 0.9rem; margin-bottom: 1px; color: #c8c3e6;">Acceso limitado, ideal para poder empezar
-          ahora mismo</p>
+        <p style="font-size: 1.3rem; font-weight: bold;  margin: -5px 0 12px 0;">🇵🇪 S/0</p>
+        <br>
+        <p style="font-size: 0.9rem; margin-bottom: 1px; margin: -15px 0 12px 0; color: #c8c3e6;">Acceso limitado, ideal para empezar ahora mismo</p>
         <ul style="list-style: none; padding: 0; font-size: 0.88rem;">
           <li class="activo">✔ Acceso básico a herramientas</li>
           <li class="activo">✔ Biblioteca Interactiva</li>
@@ -936,70 +1173,137 @@
           <li class="inactivo">✘ Inteligencia Artificial</li>
           <li class="inactivo">✘ Personalización</li>
         </ul>
-        <br>
-        <button onclick="window.location.href='https://cuadernos.ai/login';"
-          style="margin-top: 80px; background-color: #6c5dd3; color: white; padding: 12px; width: 100%; border: none; border-radius: 6px; font-weight: bold; font-size: 1rem; cursor: pointer;">
+        <button onclick="window.location.href='https://cuadernos.ai/login';"class="btn-rebote" style="margin-top: 44px; background-color: #6c5dd3; color: white; padding: 12px; width: 100%; border: none; border-radius: 6px; font-weight: bold; font-size: 1rem; cursor: pointer;">
           Suscríbete a Free
         </button>
       </div>
-      <div
-        style="background-color: #212121; border-radius: 10px; border: 2px solid white; padding: 30px 20px; width: 300px; box-shadow: 0 0 15px rgba(255,255,255,0.2); position: relative; color: #d5c9ff;">
-        <div
-          style="position: absolute; top: -12px; left: 20px; background-color: #ffffff; color: #494c68; padding: 5px 10px; border-radius: 100px; font-size: 0.75rem; font-weight: bold;">
-          RECOMENDADO</div>
+
+      <!-- Plan Premium -->
+      <div style="background-color: #212121; border-radius: 10px; border: 2px solid white; padding: 30px 20px; width: 300px; box-shadow: 0 0 15px rgba(255,255,255,0.2); position: relative; color: #d5c9ff;">
+        <div style="position: absolute; top: -12px; left: 20px; background-color: #ffffff; color: #494c68; padding: 5px 10px; border-radius: 100px; font-size: 0.75rem; font-weight: bold;">RECOMENDADO</div>
         <h2 style="margin-top: 20px; font-size: 1.5rem;">Plan Premium</h2>
         <p style="font-size: 1.3rem; font-weight: bold; margin: 0;">🇵🇪 S/20 mensual</p>
         <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 10px;">🇵🇪 S/150 anual</p>
-        <p style="font-size: 0.9rem; color: #c8c3e6;">Para usuarios individuales que buscan herramientas completas</p>
-        <ul style="list-style: none; padding: 10; font-size: 0.88rem;">
+        <p style="font-size: 0.9rem; color: #c8c3e6;">Para docentes que buscan herramientas completas</p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem;">
           <li class="activo">✔ Acceso de administrador</li>
-          <li class="activo">✔ Acceso total a herramientas Pro y Plus(Ltdo)</li>
-          <li class="activo">✔Acceso a la IA</li>
-          <li class="activo">✔Genera Sesiones e Instrumentos de Ev</li>
-          <li class="activo">✔Soporte técnico </li>
+          <li class="activo">✔ Acceso total a herramientas Pro y Plus</li>
+          <li class="activo">✔ Acceso a la IA</li>
+          <li class="activo">✔ Genera Sesiones e Instrumentos de Evaluación</li>
+          <li class="activo">✔ Soporte técnico </li>
         </ul>
-        <p style="font-size: 0.8rem; color: #b5b0c9;">Paga en cuotas sin intereses</p>
-        <br>
-        <button onclick="window.location.href='https://cuadernos.ai/login';"
-          style="margin-top: 12px; background-color: #6c5dd3; color: white; padding: 12px; width: 100%; border: none; border-radius: 6px; font-weight: bold; font-size: 1rem; cursor: pointer;">
+        <p style="font-size: 0.8rem; color: #b5b0c9">Paga en cuotas sin intereses</p>
+        <button onclick="window.location.href='https://cuadernos.ai/login';" style="margin-top: -5px; background-color: #6c5dd3; color: white; padding: 12px; width: 100%; border: none; border-radius: 6px; font-weight: bold; font-size: 1rem; cursor: pointer;">
           Suscríbete a Premium
         </button>
       </div>
-      <div
-        style="background-color: #212121; border-radius: 10px; padding: 30px 20px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.4); position: relative; color: #d5c9ff;">
+    </div>
+  </div>
+
+  <!-- Planes de Instituciones -->
+  <div id="instituciones-content" class="plans-section" style="display: none; margin-top: 40px;">
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+   <!-- Plan Free -->
+      <div style="background-color: #212121; border-radius: 10px; padding: 30px 20px; width: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.4); color: #d5c9ff;">
+        <h2 style="margin-top: 21px; font-size: 1.5rem;">Plan Free</h2>
+        <br>
+        <p style="font-size: 1.3rem; font-weight: bold;  margin: -5px 0 12px 0;">🇵🇪 S/0</p>
+        <br>
+        <p style="font-size: 0.9rem; margin-bottom: 1px; margin: -15px 0 12px 0; color: #c8c3e6;">Acceso limitado, ideal para empezar ahora mismo</p>
+        <ul style="list-style: none; padding: 0; font-size: 0.88rem;">
+          <li class="activo">✔ Acceso básico a herramientas</li>
+          <li class="activo">✔ Biblioteca Interactiva</li>
+          <li class="activo">✔ Asesoría Técnica</li>
+          <li class="activo">✔ Acceso a Plantillas</li>
+          <li class="inactivo">✘ Inteligencia Artificial</li>
+          <li class="inactivo">✘ Personalización</li>
+        </ul>
+        <button onclick="window.location.href='https://cuadernos.ai/login';" style="margin-top: 46px; background-color: #6c5dd3; color: white; padding: 12px; width: 100%; border: none; border-radius: 6px; font-weight: bold; font-size: 1rem; cursor: pointer;">
+          Suscríbete a Free
+        </button>
+      </div>
+
+      <!-- Plan Premium -->
+      <div style="background-color: #212121; border-radius: 10px; border: 2px solid white; padding: 30px 20px; width: 300px; box-shadow: 0 0 15px rgba(255,255,255,0.2); position: relative; color: #d5c9ff;">
         <div id="descuento"
-          style="position: absolute; top: -12px; right: -12px; background-color: #ff3366; color: white; padding: 15px 16px; border-radius:100px; font-size: 0.85rem; font-weight: bold;">
+          style="position: absolute; top: -12px; right: -12px; background-color: #7A6EBF; color: #E5E5F0; padding: 15px 16px; border-radius:100px; font-size: 0.85rem; font-weight: bold;">
           🎉75%DE DESCUENTO
         </div>
         <div
           style="position: absolute; top: -12px; left: 20px; background-color: #3e3f4a; color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.75rem;">
           El Más Popular</div>
-        <h2 style="margin-top: 20px; font-size: 1.5rem;">Plus Institucional</h2>
-        <p style="font-size: 1.3rem; font-weight: bold; margin: 0;">🇵🇪 S/40 mensual</p>
-        <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 10px;">🇵🇪 S/200 anual</p>
-        <p style="font-size: 0.9rem; color: #c8c3e6;">Pensado para grupos e instituciones educativas</p>
+        <h2 style="margin-top: 20px; font-size: 1.5rem;">Plan Premium</h2>
+        <p style="font-size: 1.3rem; font-weight: bold; margin: 0;">🇵🇪 S/20 mensual</p>
+        <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 10px;">🇵🇪 S/150 anual</p>
+        <p style="font-size: 0.9rem; color: #c8c3e6;">Para instituciones educativas</p>
         <ul style="list-style: none; padding: 0; font-size: 0.88rem;">
-          <li class="activo">✔ Todo lo del plan Pro</li>
-          <li class="activo">✔ Acceso a Herramientas PLUS</li>
-          <li class="activo">✔Asesoría Institucional</li>
-          <li class="activo">✔ Estadísticas y seguimiento</li>
-          <li class="activo">✔ Capacitación personalizada</li>
-          <li class="activo">✔ Asistente personal MAIA</li>
+          <li class="activo">✔ Acceso de administrador</li>
+          <li class="activo">✔ Acceso total a herramientas Pro y Plus</li>
+          <li class="activo">✔ Acceso a la IA</li>
+          <li class="activo">✔ Genera Sesiones e Instrumentos de Evaluación</li>
+          <li class="activo">✔ Soporte técnico </li>
         </ul>
-        <p style="font-size: 0.8rem; color: #b5b0c9;">Ideal para instituciones educativas</p>
-        <div style="margin-top: 8px; border-radius: 10px; padding: 20px; text-align: center; position: relative;">
-          <img
+        <p style="font-size: 0.8rem; color: #b5b0c9;">Paga en cuotas sin intereses</p>
+        <br>
+        <img
             src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/O80YEJZE46YmjSyQNq1YCxaxIfUMfQ9clBE3hN5C.png"
             alt="Asistente IA"
-            style="max-width: 25%; height: auto; border-radius: 10px; position: absolute; top: 20%; right: 5px; transform: translateY(-50%);">
-          <button onclick="window.location.href='https://cuadernos.ai/login';"
-            style="margin-top: 25px; background-color: #6c5dd3; color: white; padding: 12px; width: 100%; border: none; border-radius: 7px; font-weight: bold; font-size: 1rem; cursor: pointer;">
-            Suscríbete a Plus
-          </button>
-        </div>
+            style="max-width: 20%; height: auto; border-radius: 10px; position: absolute; top: 85%; right: 5px; transform: translateY(-50%);">
+        <button onclick="window.location.href='https://cuadernos.ai/login';" style="margin-top: -5px; background-color: #6c5dd3; color: white; padding: 12px; width: 100%; border: none; border-radius: 6px; font-weight: bold; font-size: 1rem; cursor: pointer;">
+          Suscríbete a Premium
+        </button>
       </div>
+
     </div>
+    <script>
+  // Variable de estado inicial
+  let isDocentesSelected = true;
+
+  // Al cargar, añade el evento de clic al toggle
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".toggle-container > div");
+
+    toggle.addEventListener("click", toggleSelection);
+  });
+
+  function toggleSelection() {
+    const toggleIndicator = document.getElementById("toggle-indicator");
+    const docentesText = document.getElementById("docentes-toggle");
+    const institucionesText = document.getElementById("instituciones-toggle");
+    const docentesContent = document.getElementById("docentes-content");
+    const institucionesContent = document.getElementById("instituciones-content");
+
+    if (isDocentesSelected) {
+      toggleIndicator.style.transform = "translateX(116px)";
+
+      docentesText.classList.remove("active-toggle");
+      docentesText.classList.add("inactive-toggle");
+
+      institucionesText.classList.remove("inactive-toggle");
+      institucionesText.classList.add("active-toggle");
+
+      institucionesContent.style.display = "block";
+      docentesContent.style.display = "none";
+    } else {
+      toggleIndicator.style.transform = "translateX(0)";
+
+      docentesText.classList.remove("inactive-toggle");
+      docentesText.classList.add("active-toggle");
+
+      institucionesText.classList.remove("active-toggle");
+      institucionesText.classList.add("inactive-toggle");
+
+      docentesContent.style.display = "block";
+      institucionesContent.style.display = "none";
+    }
+
+    isDocentesSelected = !isDocentesSelected;
+  }
+</script>
+
   </div>
+
+</div>
 </section>
 <!--Fin de Panes y Precios -->
 <!-- Footer -->
