@@ -527,6 +527,209 @@
 				font-size: 28px;
 			}
 		}
+
+		/* ======================================= */
+/* Estilos Globales para el Look Neón */
+/* ======================================= */
+:root {
+  --color-neón-principal: #fbf8ff; /* Morado claro/lila brillante */
+  --color-fondo-oscuro: #0E0E11;
+  --color-acento-titulo: #6658B7;
+}
+
+/* ======================================= */
+/* Estilos para la sección de Logos */
+/* ======================================= */
+.logos-grilla-contenedor {
+  background: linear-gradient(to bottom, 0%, var(--color-fondo-oscuro) 100%);
+  padding: 80px 20px 25px; 
+}
+.logos-grilla-contenedor::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 10px; /* Altura de la zona de degradado */
+  
+  /* El degradado va del color de fondo de esta sección a transparente */
+  background: linear-gradient(to bottom, transparent, #ffffff); 
+}
+
+.logos-grilla {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo-item-static {
+  flex: 1;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.logo-item-static img {
+  height: auto;
+  max-width: 100%;
+  max-height: 150px;
+  filter: 
+    grayscale(100%) brightness(180%)
+    drop-shadow(0 0 5px #7b68ee);
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.logo-item-static img:hover {
+  filter: 
+    grayscale(0%) brightness(100%)
+    drop-shadow(0 0 8px #fff)
+    drop-shadow(0 0 15px #7b68ee)
+    drop-shadow(0 0 25px rgba(123, 104, 238, 0.6));
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+/* ======================================= */
+/* Estilos Generales del Footer */
+/* ======================================= */
+.footer-nuevo {
+  padding-top: 5rem; 
+  padding-bottom: 3rem; 
+}
+
+.footer-nuevo h6 {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: var(--color-neón-principal) !important; 
+  text-shadow: 0 0 5px rgb(200, 200, 200);
+}
+
+.footer-nuevo .list-unstyled a {
+  color: rgba(186, 186, 186, 0.7) !important;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-size: 0.95rem;
+  text-decoration: none !important; 
+}
+
+.footer-nuevo .list-unstyled a:hover {
+  color: var(--color-neón-principal) !important;
+  text-shadow: 0 0 5px var(--color-neón-principal), 0 0 10px var(--color-neón-principal);
+}
+
+.footer-nuevo hr {
+  opacity: 1;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  border-color: #6658B7;
+  box-shadow: 0 0 10px #6658B7, 0 0 20px #6658B7; 
+  height: 2px;
+}
+
+.logo-atractivo-flotante {
+  height: 70px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(102, 88, 183, 0.7));
+  animation: float 4s ease-in-out infinite alternate;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-atractivo-flotante:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 15px rgba(102, 88, 183, 1));
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ======================================= */
+/* Estilos de Redes Sociales */
+/* ======================================= */
+.social-icon-facebook { color: #1774ee !important; }
+.social-icon-twitter { color: #1DA1F2 !important; }
+.social-icon-youtube { color: #FF0000 !important; }
+.social-icon-instagram { color: #E4405F !important; }
+
+.footer-nuevo .social-icon-link-item:hover .fab {
+  text-shadow: 0 0 8px currentColor, 0 0 15px currentColor; 
+  transform: scale(1.1);
+}
+
+/* ======================================= */
+/* Líneas Divisorias y Contenido más Junto */
+/* ======================================= */
+.footer-nuevo .row-con-divisiones > .col-md-3 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer-nuevo .row-con-divisiones > .col-md-3:not(:last-child) {
+  /* La línea solo se mostrará en pantallas grandes */
+  border-right: 3px solid rgba(115, 100, 203, 0.3);
+}
+
+
+/* ======================================= */
+/* Estilos de maquetación y alineación */
+/* ======================================= */
+/* Por defecto (móvil), el texto está centrado */
+.footer-nuevo .col-md-3 {
+  text-align: center;
+}
+/* En pantallas grandes, se alinea a la izquierda */
+@media (min-width: 768px) {
+  .footer-nuevo .col-md-3 {
+    text-align: left;
+  }
+}
+
+/* ======================================= */
+/* ---- OPTIMIZACIONES PARA MÓVILES ---- */
+/* ======================================= */
+@media (max-width: 767px) {
+
+  /* Reduce el espaciado general */
+  .logos-grilla-contenedor {
+    padding: 60px 15px 30px; 
+  }
+  .footer-nuevo {
+    padding-top: 3rem; 
+    padding-bottom: 2rem; 
+  }
+
+  /* Ajusta los logos de la grilla */
+  .logos-grilla {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .logo-item-static img {
+    max-height: 80px; /* Logos más pequeños en móvil */
+  }
+
+  /* Ajusta el logo principal del footer */
+  .logo-atractivo-flotante {
+    height: 80px; /* Logo del footer más pequeño */
+  }
+
+  /* Gestiona las líneas divisorias del footer en móvil */
+  .footer-nuevo .row-con-divisiones > .col-md-3:not(:last-child) {
+    border-right: none; /* Quita la línea vertical */
+    border-bottom: 1px solid rgba(102, 88, 183, 0.3); /* Pone una línea horizontal */
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-nuevo .row-con-divisiones > .col-md-3:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
 	</style>
 </head>
 <!--  botón flotante de WhatsApp -->
