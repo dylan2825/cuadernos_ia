@@ -276,7 +276,7 @@
 		}
 
 		.carrusel-logos-contenedor {
-			background: linear-gradient(to top, #0E0E11, #0E0E11);
+			background: linear-gradient(to top);
 			padding: 60px;
 			position: relative;
 			/* Se agrega padding extra en la parte inferior para que el tooltip no se corte */
@@ -335,32 +335,7 @@
 			background: color-mix(in srgb, #ffd900 30%, transparent);
 		}
 
-		.logo-tooltip {
-			position: absolute;
-			bottom: calc(100% + 5px);
-			left: 50%;
-			transform: translateX(-50%);
-			background: rgba(0, 0, 0, 0.7);
-			color: #fff;
-			padding: 5px 10px;
-			border-radius: 6px;
-			white-space: nowrap;
-			opacity: 0;
-			pointer-events: none;
-			transition: opacity 0.3s ease, transform 0.3s ease;
-			z-index: 100;
-		}
-
-		.logo-tooltip::after {
-			content: '';
-			position: absolute;
-			top: 100%;
-			left: 50%;
-			margin-left: -5px;
-			border-width: 5px;
-			border-style: solid;
-			border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
-		}
+	
 
 		.logo-wrapper:hover .logo-tooltip {
 			opacity: 1;
@@ -541,6 +516,7 @@
 /* Estilos para la sección de Logos */
 /* ======================================= */
 .logos-grilla-contenedor {
+position: relative;
   background: linear-gradient(to bottom, 0%, var(--color-fondo-oscuro) 100%);
   padding: 80px 20px 25px; 
 }
@@ -553,7 +529,7 @@
   height: 10px; /* Altura de la zona de degradado */
   
   /* El degradado va del color de fondo de esta sección a transparente */
-  background: linear-gradient(to bottom, transparent, #ffffff); 
+  background: linear-gradient(to bottom, transparent,); 
 }
 
 .logos-grilla {
@@ -999,315 +975,7 @@
 	</div>
 </section>
 <!-- ======= Fin de Sección de Soporte ======= -->
-<!-- Lista de Empresas Clientes -->
-<section aria-label="Lista de empresas cliente">
-	<div class="carrusel-logos-contenedor">
-		<div class="carrusel-logos-lista" id="logosTrack" role="list">
-			<!-- Bloque completo de 60 logos para la primera parte de la animación -->
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 1"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/beDtRoPANnL5K53TXm3Fx4b2yFyomnadpL1z4bO1.png" />
-				<span class="logo-tooltip">Logo 1</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 2"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/QkoifV3JBqCi4ksChFtObtTFCFnlXtA50TBaajdR.png" />
-				<span class="logo-tooltip">Logo 2</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 3"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/jjnPCier4qlFAH0Hfb6MQzCZpFJxh97CFoS0rkI0.png" />
-				<span class="logo-tooltip">Logo 3</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 4"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/jfRcRKOOZnQAbOIUKAeK4erv3eXE1796pMJce8Vc.png" />
-				<span class="logo-tooltip">Logo 4</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 5"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/wYSUI1htBLWtXUNaGGaVaDHAAP1kZ5rDvkyDVmQE.png" />
-				<span class="logo-tooltip">Logo 5</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 6"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/GHjXTZxnbvVn0WvvGoZ1fp56Lb3tW5MFKpQPVIqu.png" />
-				<span class="logo-tooltip">Logo 6</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 7"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/MY20yCFRpupPX8XUMUfKvqurQLAcnE2xd3EcFuoO.png" />
-				<span class="logo-tooltip">Logo 7</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 8"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/4gIxIY7zsqBtIct3zKjSSn4aFD5TRbonf0PjDxse.png" />
-				<span class="logo-tooltip">Logo 8</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 9"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/CiNTnKsa87fNgMUBoTSBmtF7wTLBueFwdL2Nm5PV.png" />
-				<span class="logo-tooltip">Logo 9</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 10"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/1P14iT0vmgjH2yrv7S1aA8g9T0dIVHm9cOFiDJ9q.png" />
-				<span class="logo-tooltip">Logo 10</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 11"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/pMY5NscW4JWdKG7V4jhdvrJU8jCss4xif3hEkoqb.png" />
-				<span class="logo-tooltip">Logo 11</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 12"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/1YqVYK3q8x4tMiTYL5GuQtfsVDZQLt7Scg0fOStj.png" />
-				<span class="logo-tooltip">Logo 12</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 13"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/NjsKzvfcyv5iiWWmt4OiybVje9J4a4wV6KinCw4Q.png" />
-				<span class="logo-tooltip">Logo 13</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 14"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/La7CUUwXvqygIuleZcyLFHpJpLi2H4i0y6C5C5oy.png" />
-				<span class="logo-tooltip">Logo 14</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 15"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/daYj7hIN4ggVK74gedwtzANMtcMuaxdRAzr2w4vI.png" />
-				<span class="logo-tooltip">Logo 15</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 16"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/wkxjwGephxMP15fdf27EQ8t8SHwcK6VJZy5ghE2H.png" />
-				<span class="logo-tooltip">Logo 16</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 17"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/zlZyaWdhqhWPsuaAqUCeJ3eyU8VklVwsK8ONpKmm.png" />
-				<span class="logo-tooltip">Logo 17</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 18"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/rYPLKQkI6GfcnwrkaKENTJnafNU0LhlGjklgS9wz.png" />
-				<span class="logo-tooltip">Logo 18</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 19"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ivz7zuOQc6Ef5vPBNVj7FCvMNscrXRBQnYZWsyw3.png" />
-				<span class="logo-tooltip">Logo 19</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 20"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/xH6glfPDkor6skoyPrIYnUlX8NMUiQq5AsRQxc0q.png" />
-				<span class="logo-tooltip">Logo 20</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 21"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/2xB373QGqpvDQ8vveHLa3dWS90pjmi83Unq7vWt2.png" />
-				<span class="logo-tooltip">Logo 21</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 22"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/GfUOJiZ2lzepBmQINLWabAJ6B8lXsiD6K2ukvGFp.png" />
-				<span class="logo-tooltip">Logo 22</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 23"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/rq1m9i7A12JHQ6s8D8nuTU7YWnSVIppXSgWLF1bd.png" />
-				<span class="logo-tooltip">Logo 23</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 24"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/zrO2vL15fE8zNDz1oMXdzqJU9GNWsayDl0LG4IBe.png" />
-				<span class="logo-tooltip">Logo 24</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 25"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/3GHrIvS9TctGJ28vp4nyO4cMGmMp1TkR3Y1GjE2v.png" />
-				<span class="logo-tooltip">Logo 25</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 26"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/vueJskoMiKyZDPdTLAyQKZTs8ddvMhbAVLWdNwI7.png" />
-				<span class="logo-tooltip">Logo 26</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 27"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/7k28ADCEPAK95nOjPEZ4Ep5gWSuielR4QSBRX4hl.png" />
-				<span class="logo-tooltip">Logo 27</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 28"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/pibX81bvwNW1yQW0mkhhcepC5GBXod0bX2tjLqJP.png" />
-				<span class="logo-tooltip">Logo 28</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 29"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/98jjRMegKIa0rPlgxpFJfB4L2yxqgaWvj7cYkGkt.png" />
-				<span class="logo-tooltip">Logo 29</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 30"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/FViYfAbnzZRD6eURqlLodnVUa6iIKWMcnyklyTtw.png" />
-				<span class="logo-tooltip">Logo 30</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 31"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ge9M8dDstEgsEaw63lf8xDgHTNvApeyqWKz6gEGr.png" />
-				<span class="logo-tooltip">Logo 31</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 32"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ZGghZN4EXOx0V8Xj0I0PKgJRveGAZGvOLv1yoHPr.png" />
-				<span class="logo-tooltip">Logo 32</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 33"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/KiRoXX3d3GPNOamsuvy0r5FkXscxjoqr1Sr1QRv0.png" />
-				<span class="logo-tooltip">Logo 33</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 34"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/n6fGkfEXLQ6w8kbuSICx39KbDTZIVYhzh43XaMDl.png" />
-				<span class="logo-tooltip">Logo 34</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 35"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/P5ZnnrjAIo2zXSEnLZMEMYPoIcwJfucUqv4L7ubu.png" />
-				<span class="logo-tooltip">Logo 35</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 36"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/qO6wFKejf3ETuoLmqQppk6mMQsjZSSK9I1q1Q33Q.png" />
-				<span class="logo-tooltip">Logo 36</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 37"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/4hkdSgDcB2DBSAJkaEhRp8b8cs6LtfjKGRNN9I9L.png" />
-				<span class="logo-tooltip">Logo 37</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 38"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ua9entgEZoUTl5h8EYe7zOZY6NK5Lb0vWhvaSy4D.png" />
-				<span class="logo-tooltip">Logo 38</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 39"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/JRybrCqkLXU3FGjKx64IJEYfpRqsACkdAUtFfzit.png" />
-				<span class="logo-tooltip">Logo 39</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 40"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/x0gqIPp2ONJVwawONEjjAJ1cz4KcXzMwqhVUBBMs.png" />
-				<span class="logo-tooltip">Logo 40</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 41"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/OXugVoIRZbJEweUmnfiySe0wfDGBmFVcsOIegA29.png" />
-				<span class="logo-tooltip">Logo 41</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 42"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/YKjA2L2pbXZNvdQdCCTf3a3Lo1fdFc4arLZfbRu3.png" />
-				<span class="logo-tooltip">Logo 42</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 43"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/hdulf79JoalKCxcIuyARbFFjLeHVboDW5HWmh2j5.png" />
-				<span class="logo-tooltip">Logo 43</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 44"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/yWbAy7gtyGUS9tZYyjfma1IAuXC8eGHWBeQt0FVs.png" />
-				<span class="logo-tooltip">Logo 44</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 45"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/2VZ4vpbQBxjHCt4luALLK136yUX9K8jJcPedHnhP.png" />
-				<span class="logo-tooltip">Logo 45</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 46"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/aeO17gZfMjW3uaMjSwyGON0zdAIpVQMGQMCltk7f.png" />
-				<span class="logo-tooltip">Logo 46</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 47"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/9I2JhqwdDBRAGTOQPlhwZ85Mo8NMShjwucg4AShc.png" />
-				<span class="logo-tooltip">Logo 47</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 48"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/aIvTQatUlv3Zh3tkI3klRTcVs9GaJWZOGIyLyW0l.png" />
-				<span class="logo-tooltip">Logo 48</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 49"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/SelAwoSYsXXkF8b1GwOlpVj0juns2T8JW0omU2Kp.png" />
-				<span class="logo-tooltip">Logo 49</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 50"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/OgJZKVZX2YAbe53ib2rVpc3EgAxgTkKwFtsy5waX.png" />
-				<span class="logo-tooltip">Logo 50</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 51"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/FUC99uucWZNA2Kk0Sbv4WkqthCXH4PXQQRuw3CDv.png" />
-				<span class="logo-tooltip">Logo 51</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 52"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ho5twAHooCMASg33g7Tiq2NGcI392BhPa43yn7Dq.png" />
-				<span class="logo-tooltip">Logo 52</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 53"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/zYCg1Va4gfl1YvnwbOjoH7yRLfvomYS94y5GeYQU.png" />
-				<span class="logo-tooltip">Logo 53</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 54"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/5OC2AGvsvQNo4x1IByS69F4obXUtufPpitj4Vifi.png" />
-				<span class="logo-tooltip">Logo 54</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 55"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/c0roxMUxX6IWnuK0HRxTJRBHSMYav7MsdnOZiMLB.png" />
-				<span class="logo-tooltip">Logo 55</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 56"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ZiKds5sDqXXyVXNkk6KPkPdS60lMLTnhYA6VdNnl.png" />
-				<span class="logo-tooltip">Logo 56</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 57"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/T7MfWoT35k4pDCekTkoNnHMKmTnfkxS26I19gOxk.png" />
-				<span class="logo-tooltip">Logo 57</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 58"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/SzOVN4cOFrM34Ity1nsI1i3OemtGPE96IzxWUOJK.png" />
-				<span class="logo-tooltip">Logo 58</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 59"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/4YzfM8AmW7B8a0u7r5nfboTq5mEdFqgwi94mj8Wv.png" />
-				<span class="logo-tooltip">Logo 59</span>
-			</div>
-			<div class="logo-wrapper">
-				<img role="listitem" loading="lazy" alt="Logo 60"
-					src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/peSxoFXGgsDSB0vHJaNrzBHvbpNnhFGlwr17NWKj.png" />
-				<span class="logo-tooltip">Logo 60</span>
-			</div>
-		</div>
-	</div>
-</section>
-<!--Fin Lista de Empresas Clientes-->
+
 <!--Libros destacados-->
 <div id="bookStoreDestacados">
 	<destacados-component></destacados-component>
@@ -1400,70 +1068,379 @@
 	</div>
 </section>
 <!--Fin de Panes y Precios -->
-<!-- Footer -->
-<footer style="background-color: #0E0E11; color: #ffffff;">
-	<div class="container py-5">
-		<div class="row text-center text-md-left">
-			<!-- Idioma -->
-			<div class="col-md-3 mb-4">
-				<h6 style="color: #6658B7;">Idioma</h6>
-				<select class="form-control rounded-pill bg-dark text-light border-0" aria-label="Seleccionar idioma">
-					<option selected>Español</option>
-					<option>Inglés</option>
-				</select>
-			</div>
-			<!-- Plataforma -->
-			<div class="col-md-3 mb-4">
-				<h6 style="color: #6658B7;">Plataforma</h6>
-				<ul class="list-unstyled">
-					<li><a href="#" class="text-white-50 d-block">Planes</a></li>
-					<li><a href="#" class="text-white-50 d-block">Centro de ayuda</a></li>
-					<li><a href="#" class="text-white-50 d-block">Noticias</a></li>
-				</ul>
-			</div>
-			<!-- Legal -->
-			<div class="col-md-3 mb-4">
-				<h6 style="color: #6658B7;">Legal</h6>
-				<ul class="list-unstyled">
-					<li><a href="#" class="text-white-50 d-block">Términos y condiciones</a></li>
-					<li><a href="#" class="text-white-50 d-block">Política de privacidad</a></li>
-					<li><a href="#" class="text-white-50 d-block">Política de cookies</a></li>
-				</ul>
-			</div>
-			<!-- Redes Sociales -->
-			<div class="col-md-3 mb-4">
-				<h6 style="color: #6658B7;">Redes sociales</h6>
-				<ul class="list-unstyled">
-					<li class="mb-2">
-						<a href="#" class="text-white-50 align-items-center" aria-label="Facebook">
-							<i class="fab fa-facebook-f mr-2" style="color: #6658B7;"></i>Facebook
-						</a>
-					</li>
-					<li class="mb-2">
-						<a href="#" class="text-white-50 align-items-center" aria-label="Twitter / X">
-							<i class="fab fa-twitter mr-2" style="color: #6658B7;"></i>X
-						</a>
-					</li>
-					<li class="mb-2">
-						<a href="#" class="text-white-50 align-items-center" aria-label="YouTube">
-							<i class="fab fa-youtube mr-2" style="color: #6658B7;"></i>YouTube
-						</a>
-					</li>
-					<li>
-						<a href="#" class="text-white-50 align-items-center" aria-label="Instagram">
-							<i class="fab fa-instagram mr-2" style="color: #6658B7;"></i>Instagram
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<hr style="border-color: #6658B7;">
-		<div class="d-flex justify-content-between align-items-center flex-column flex-md-row text-center text-md-left">
-			<p class="mb-0 text-white-50">© 2025 Cuadernos.ai. Todos los derechos reservados.</p>
-			<img src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/imgs/pEP57IWVBpxcZrti9RzJs8ab5zV78eu1JD0XQW7H.png"
-				alt="Logo Cuadernos.ai" height="32">
+<section class="logos-grilla-contenedor">
+    <div class="container text-center mb-4">
+        <h1 class="text-white fw-bold mb-1">Confía en Nosotros</h1>
+        <p class="text-white-50">Nuestra tecnología es utilizada y respaldada por:</p>
+    </div>
+
+    <div class="logos-grilla">
+        <div class="logo-item-static"><img src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/33hG7w83Hph3sqObIzUfMQAKyF6pNHOiVHVknSdf.png" alt="Logo de UGEL Huaraz"></div>
+        <div class="logo-item-static"><img src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/eJnumELbfN3OHdpfL0pPOdpbUjzGu8bxpf2MfvX8.png" alt="Logo de UGEL Santa"></div>
+        <div class="logo-item-static"><img src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/EP9kAWCGn3qMLynt107lL9xJRcBFR9m79mIMtk68.png" alt="Logo de UGEL Pomabamba"></div>
+    </div>
+</section>
+<!-- Lista de Empresas Clientes -->
+<section aria-label="Lista de empresas cliente">
+	<div class="carrusel-logos-contenedor">
+		<div class="carrusel-logos-lista" id="logosTrack" role="list">
+			<!-- Bloque completo de 60 logos para la primera parte de la animación -->
+			<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 1"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/beDtRoPANnL5K53TXm3Fx4b2yFyomnadpL1z4bO1.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 2"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/QkoifV3JBqCi4ksChFtObtTFCFnlXtA50TBaajdR.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 3"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/jjnPCier4qlFAH0Hfb6MQzCZpFJxh97CFoS0rkI0.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 4"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/jfRcRKOOZnQAbOIUKAeK4erv3eXE1796pMJce8Vc.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 5"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/wYSUI1htBLWtXUNaGGaVaDHAAP1kZ5rDvkyDVmQE.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 6"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/GHjXTZxnbvVn0WvvGoZ1fp56Lb3tW5MFKpQPVIqu.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 7"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/MY20yCFRpupPX8XUMUfKvqurQLAcnE2xd3EcFuoO.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 8"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/4gIxIY7zsqBtIct3zKjSSn4aFD5TRbonf0PjDxse.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 9"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/CiNTnKsa87fNgMUBoTSBmtF7wTLBueFwdL2Nm5PV.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 10"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/1P14iT0vmgjH2yrv7S1aA8g9T0dIVHm9cOFiDJ9q.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 11"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/pMY5NscW4JWdKG7V4jhdvrJU8jCss4xif3hEkoqb.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 12"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/1YqVYK3q8x4tMiTYL5GuQtfsVDZQLt7Scg0fOStj.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 13"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/NjsKzvfcyv5iiWWmt4OiybVje9J4a4wV6KinCw4Q.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 14"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/La7CUUwXvqygIuleZcyLFHpJpLi2H4i0y6C5C5oy.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 15"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/daYj7hIN4ggVK74gedwtzANMtcMuaxdRAzr2w4vI.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 16"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/wkxjwGephxMP15fdf27EQ8t8SHwcK6VJZy5ghE2H.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 17"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/zlZyaWdhqhWPsuaAqUCeJ3eyU8VklVwsK8ONpKmm.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 18"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/rYPLKQkI6GfcnwrkaKENTJnafNU0LhlGjklgS9wz.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 19"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ivz7zuOQc6Ef5vPBNVj7FCvMNscrXRBQnYZWsyw3.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 20"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/xH6glfPDkor6skoyPrIYnUlX8NMUiQq5AsRQxc0q.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 21"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/2xB373QGqpvDQ8vveHLa3dWS90pjmi83Unq7vWt2.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 22"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/GfUOJiZ2lzepBmQINLWabAJ6B8lXsiD6K2ukvGFp.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 23"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/rq1m9i7A12JHQ6s8D8nuTU7YWnSVIppXSgWLF1bd.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 24"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/zrO2vL15fE8zNDz1oMXdzqJU9GNWsayDl0LG4IBe.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 25"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/3GHrIvS9TctGJ28vp4nyO4cMGmMp1TkR3Y1GjE2v.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 26"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/vueJskoMiKyZDPdTLAyQKZTs8ddvMhbAVLWdNwI7.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 27"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/7k28ADCEPAK95nOjPEZ4Ep5gWSuielR4QSBRX4hl.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 28"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/pibX81bvwNW1yQW0mkhhcepC5GBXod0bX2tjLqJP.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 29"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/98jjRMegKIa0rPlgxpFJfB4L2yxqgaWvj7cYkGkt.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 30"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/FViYfAbnzZRD6eURqlLodnVUa6iIKWMcnyklyTtw.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 31"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ge9M8dDstEgsEaw63lf8xDgHTNvApeyqWKz6gEGr.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 32"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ZGghZN4EXOx0V8Xj0I0PKgJRveGAZGvOLv1yoHPr.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 33"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/KiRoXX3d3GPNOamsuvy0r5FkXscxjoqr1Sr1QRv0.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 34"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/n6fGkfEXLQ6w8kbuSICx39KbDTZIVYhzh43XaMDl.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 35"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/P5ZnnrjAIo2zXSEnLZMEMYPoIcwJfucUqv4L7ubu.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 36"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/qO6wFKejf3ETuoLmqQppk6mMQsjZSSK9I1q1Q33Q.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 37"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/4hkdSgDcB2DBSAJkaEhRp8b8cs6LtfjKGRNN9I9L.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 38"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ua9entgEZoUTl5h8EYe7zOZY6NK5Lb0vWhvaSy4D.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 39"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/JRybrCqkLXU3FGjKx64IJEYfpRqsACkdAUtFfzit.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 40"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/x0gqIPp2ONJVwawONEjjAJ1cz4KcXzMwqhVUBBMs.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 41"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/OXugVoIRZbJEweUmnfiySe0wfDGBmFVcsOIegA29.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 42"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/YKjA2L2pbXZNvdQdCCTf3a3Lo1fdFc4arLZfbRu3.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 43"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/hdulf79JoalKCxcIuyARbFFjLeHVboDW5HWmh2j5.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 44"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/yWbAy7gtyGUS9tZYyjfma1IAuXC8eGHWBeQt0FVs.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 45"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/2VZ4vpbQBxjHCt4luALLK136yUX9K8jJcPedHnhP.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 46"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/aeO17gZfMjW3uaMjSwyGON0zdAIpVQMGQMCltk7f.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 47"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/9I2JhqwdDBRAGTOQPlhwZ85Mo8NMShjwucg4AShc.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 48"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/aIvTQatUlv3Zh3tkI3klRTcVs9GaJWZOGIyLyW0l.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 49"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/SelAwoSYsXXkF8b1GwOlpVj0juns2T8JW0omU2Kp.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 50"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/OgJZKVZX2YAbe53ib2rVpc3EgAxgTkKwFtsy5waX.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 51"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/FUC99uucWZNA2Kk0Sbv4WkqthCXH4PXQQRuw3CDv.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 52"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ho5twAHooCMASg33g7Tiq2NGcI392BhPa43yn7Dq.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 53"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/zYCg1Va4gfl1YvnwbOjoH7yRLfvomYS94y5GeYQU.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 54"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/5OC2AGvsvQNo4x1IByS69F4obXUtufPpitj4Vifi.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 55"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/c0roxMUxX6IWnuK0HRxTJRBHSMYav7MsdnOZiMLB.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 56"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/ZiKds5sDqXXyVXNkk6KPkPdS60lMLTnhYA6VdNnl.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 57"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/T7MfWoT35k4pDCekTkoNnHMKmTnfkxS26I19gOxk.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 58"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/SzOVN4cOFrM34Ity1nsI1i3OemtGPE96IzxWUOJK.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 59"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/4YzfM8AmW7B8a0u7r5nfboTq5mEdFqgwi94mj8Wv.png" />
+    <span class="logo-tooltip"></span>
+</div>
+<div class="logo-wrapper">
+    <img role="listitem" loading="lazy" alt="Logo 60"
+        src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/worksheets/peSxoFXGgsDSB0vHJaNrzBHvbpNnhFGlwr17NWKj.png" />
+    <span class="logo-tooltip"></span>
+</div>
 		</div>
 	</div>
+</section>
+<!--Fin Lista de Empresas Clientes-->
+
+<footer class="footer-nuevo">
+    <div class="container">
+        <div class="row text-center text-md-left row-con-divisiones">
+
+            <div class="col-md-3 mb-4 text-center">
+                <img class="logo-atractivo-flotante" src="https://s3-us-east-2.amazonaws.com/nuevositaav/cuadernos/public/15/imgs/pEP57IWVBpxcZrti9RzJs8ab5zV78eu1JD0XQW7H.png" alt="Logo Cuadernos.ai">
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h6>Plataforma</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Planes</a></li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Noticias</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h6>Legal</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h6>Redes sociales</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-1 social-icon-link-item">
+                        <a href="#"><i class="fab fa-facebook-f social-icon-facebook"></i> Facebook</a>
+                    </li>
+                    <li class="mb-1 social-icon-link-item">
+                        <a href="#"><i class="fab fa-twitter social-icon-twitter"></i> X</a>
+                    </li>
+                    <li class="mb-1 social-icon-link-item">
+                        <a href="#"><i class="fab fa-youtube social-icon-youtube"></i> YouTube</a>
+                    </li>
+                    <li class="social-icon-link-item">
+                        <a href="#"><i class="fab fa-instagram social-icon-instagram"></i> Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+            <p class="mb-0 text-white-50">© 2025 Cuadernos.ai. Todos los derechos reservados.</p>
+        </div>
+    </div>
 </footer>
 <!-- Fin Footer -->
 <!-- Scripts -->
